@@ -58,3 +58,5 @@ def run_cli():
         print("1. Encode text to Morse code")
         print("2. Decode Morse code to text")
         print("3. Exit")
+        
+        choice = input("👉 Your choice (1/2/3): ").strip()
