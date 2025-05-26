@@ -38,3 +38,13 @@ def letters_to_morse(text):
         else:
             morse_code.append('')  # Unrecognized characters become blanks
     return ' '.join(morse_code)
+
+def morse_to_letters(code):
+    """Converts Morse code to plain text."""
+    words = code.split(' / ')
+    decoded = []
+    for word in words:
+        letters = word.split()
+        decoded_word = ''.join(MORSE_TO_LETTERS.get(char, '') for char in letters)
+        decoded.append(decoded_word)
+    return ' '.join(decoded)
