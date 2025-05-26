@@ -26,3 +26,15 @@ MORSE_CODE_DICT = {
 
 # Invert the dictionary to decode Morse to letters
 MORSE_TO_LETTERS = {v: k for k, v in MORSE_CODE_DICT.items()}
+
+
+def letters_to_morse(text):
+    """Converts plain text to Morse code."""
+    text = text.upper()
+    morse_code = []
+    for char in text:
+        if char in MORSE_CODE_DICT:
+            morse_code.append(MORSE_CODE_DICT[char])
+        else:
+            morse_code.append('')  # Unrecognized characters become blanks
+    return ' '.join(morse_code)
