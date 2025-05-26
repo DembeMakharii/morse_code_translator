@@ -48,3 +48,13 @@ def morse_to_letters(code):
         decoded_word = ''.join(MORSE_TO_LETTERS.get(char, '') for char in letters)
         decoded.append(decoded_word)
     return ' '.join(decoded)
+
+
+def run_cli():
+    """Command Line Interface for R2-D2's Morse Translator."""
+    print("🔊 Welcome to R2-D2's Morse Translator 🔊")
+    while True:
+        print("\nChoose an option:")
+        print("1. Encode text to Morse code")
+        print("2. Decode Morse code to text")
+        print("3. Exit")
