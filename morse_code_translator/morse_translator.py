@@ -60,3 +60,17 @@ def run_cli():
         print("3. Exit")
         
         choice = input("👉 Your choice (1/2/3): ").strip()
+        
+        if choice == '1':
+            text = input("📤 Enter text to encode: ")
+            print("🔐 Morse Code:")
+            print(letters_to_morse(text))
+        elif choice == '2':
+            code = input("📥 Enter Morse code to decode (use / for spaces): ")
+            print("💬 Decoded Text:")
+            print(morse_to_letters(code))
+        elif choice == '3':
+            print("👋 Goodbye, Padawan!")
+            break
+        else:
+            print("🚫 Invalid choice. Try again.")
