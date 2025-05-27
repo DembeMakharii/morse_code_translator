@@ -35,8 +35,6 @@ def letters_to_morse(text):
     for char in text:
         if char in MORSE_CODE_DICT:
             morse_code.append(MORSE_CODE_DICT[char])
-        else:
-            morse_code.append('')  # Unrecognized characters become blanks
     return ' '.join(morse_code)
 
 def morse_to_letters(code):
