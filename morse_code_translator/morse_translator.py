@@ -1,6 +1,7 @@
 # morse_translator.py
 # 📡 R2-D2's Secret Morse Translator
 
+
 MORSE_CODE_DICT = {
     'A': '.-',     'B': '-...',   'C': '-.-.',
     'D': '-..',    'E': '.',      'F': '..-.',
@@ -36,6 +37,7 @@ def letters_to_morse(text):
         if char in MORSE_CODE_DICT:
             morse_code.append(MORSE_CODE_DICT[char])
     return ' '.join(morse_code)
+
 
 def morse_to_letters(code):
     """Converts Morse code to plain text."""
