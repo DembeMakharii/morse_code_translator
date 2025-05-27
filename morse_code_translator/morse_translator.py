@@ -39,10 +39,13 @@ def letters_to_morse(text):
 
 def morse_to_letters(code):
     """Converts Morse code to plain text."""
-    words = code.split(' / ')
+    words = code.split(' / ')  # Split words by slash with spaces
     decoded = []
     for word in words:
         letters = word.split()
-        decoded_word = ''.join(MORSE_TO_LETTERS.get(char, '') for char in letters)
-        decoded.append(decoded_word)
+        decoded_word = []
+        for char in letters:
+            if char in MORSE_TO_LETTERS:
+                decoded_word.append(MORSE_TO_LETTERS[char])
+        decoded.append(''.join(decoded_word))
     return ' '.join(decoded)
